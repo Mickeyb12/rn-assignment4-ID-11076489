@@ -6,7 +6,7 @@ export default function App() {
         <View style={styles.header1Container}>
             <View>
                 <Text style={styles.bigText}>Eric Atsu</Text>
-                <Text style={styles.grayText}>eric@gmail.com</Text>
+                <Text style={[styles.grayText, styles.emailText]}>eric@gmail.com</Text>
             </View>
             <View style={styles.imgStyles}>
                 <Image source={require('../assets/Profilepic.jpeg')} style={styles.profilePic} />
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         width: '100%',
         borderColor: 'black',
         marginTop: 20,
-        paddingHorizontal: 20, 
+        paddingHorizontal: 20,
     },
     bigText: {
         fontSize: 20,
@@ -32,17 +32,20 @@ const styles = StyleSheet.create({
     grayText: {
         color: 'gray',
     },
+    emailText: {
+        fontSize: 18, 
+    },
     imgStyles: {
         backgroundColor: 'white',
-        borderRadius: 20, 
-        width: 40, 
+        borderRadius: 20,
+        width: 40,
         height: 40,
         justifyContent: 'center',
         alignItems: 'center',
     },
     profilePic: {
-        width: 50, 
+        width: 50,
         height: 50,
-        borderRadius: 50, 
+        borderRadius: 50,
     },
 });
