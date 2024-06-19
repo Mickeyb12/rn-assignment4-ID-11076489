@@ -13,7 +13,7 @@ const sections = [
     {
         key: 2,
         logo: require("../assets/Googlelogo.png"),
-        position: "Software Engineering",
+        position: "Software Engineer",
         company: "Google",
         salary: "$160,000",
         location: "Accra, Ghana",
@@ -59,7 +59,7 @@ export default function App() {
 const styles = StyleSheet.create({
     mainContainer: {
         padding: 20,
-        backgroundColor: 'white',
+        backgroundColor: '#FAFAFD',
     },
     featuredRow: {
         flexDirection: 'row',
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     },
     company: {
         color: 'white',
-        fontSize: 12,
+        fontSize: 14,
         marginTop: 1,
     },
     salaryLocationContainer: {
@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     },
     location: {
         color: 'white',
+        fontWeight: 'bold',
         fontSize: 14,
     },
     blackText: {
