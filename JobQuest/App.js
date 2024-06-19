@@ -1,27 +1,31 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import Header1 from "./HomePage/Header1";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginPage from './LoginPage';
+import HomePage from './HomePage';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <>
-        <ScrollView>
-          <View style={styles.container}>
-            <Header1/>
-           
-          </View>
-        </ScrollView>
-
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={HomePage} options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "flex-start", 
-    alignItems: "flex-start",
-    paddingTop: 52, 
-    padding: 20, 
-    backgroundColor:"#F7F0E8"
+  flex: 1,
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  paddingTop: 52,
+  padding: 20,
+  backgroundColor: '#FAFAFD',
   }
-});
+  });
