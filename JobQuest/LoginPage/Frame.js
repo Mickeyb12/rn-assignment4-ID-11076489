@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   image: {
-    width: 50, 
-    height: 50, 
+    width: 40, 
+    height: 40, 
     marginHorizontal: 10,
   },
   accountContainer: {
